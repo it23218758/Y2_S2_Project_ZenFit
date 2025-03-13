@@ -439,7 +439,7 @@ async function run() {
                         _id: 0,
                         classes: 1,
                         instructor: {
-                            $arrayElemAt: ["$instructor", 0]
+                            $arrayElemAt: ["$instructors", 0]
                         }
                     }
                 }
