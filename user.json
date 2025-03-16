@@ -7,7 +7,7 @@
       "role": "instructor",
       "gender": "Is not specified",
       "address": "Is not Provided",
-      "phone": "Is not Provide",
+      "phone": "Is provideed",
       "about": "",
       "skills": null
     },
@@ -20,8 +20,8 @@
       "address": "West Bengal",
       "role": "instructor",
       "phone": "0134567894",
-      "about": "",
-      "skills": null,
-      "skills": null
+      "about": ""
+   
+
     }
   ]
