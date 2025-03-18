@@ -494,6 +494,7 @@ app.put('/update-user/:id', verifyJWT, verifyAdmin, async (req, res) => {
             role: updatedUser.option,
             address: updatedUser.address,
             phone: updatedUser.phone,
+            phone: updatedUser.password,
             about: updatedUser.about,
             photoUrl: updatedUser.photoUrl,
             skills: updatedUser.skills ? updatedUser.skills : null,
@@ -502,3 +503,8 @@ app.put('/update-user/:id', verifyJWT, verifyAdmin, async (req, res) => {
     const result = await userCollection.updateOne(filter, updateDoc, options);
     res.send(result);
 })
+
+// Listen
+app.listen(port, () => {
+    console.log(`SERVER IS RUNNING ON PORT ${port}`);
+}) 
