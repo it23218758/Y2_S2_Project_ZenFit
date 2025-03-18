@@ -481,3 +481,24 @@ app.listen(port, () => {
     console.log(`SERVER IS RUNNING ON PORT ${port}`);
 })
 
+// UPDATE USER
+app.put('/update-user/:id', verifyJWT, verifyAdmin, async (req, res) => {
+    const id = req.params.id;
+    const updatedUser = req.body;
+    const filter = { _id: new ObjectId(id) };
+    const options = { upsert: true };
+    const updateDoc = {
+        $set: {
+            name: updatedUser.name,
+            email: updatedUser.email,
+            role: updatedUser.option,
+            address: updatedUser.address,
+            phone: updatedUser.phone,
+            about: updatedUser.about,
+            photoUrl: updatedUser.photoUrl,
+            skills: updatedUser.skills ? updatedUser.skills : null,
+        }
+    }
+    const result = await userCollection.updateOne(filter, updateDoc, options);
+    res.send(result);
+})
