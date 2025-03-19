@@ -497,6 +497,7 @@ app.put('/update-user/:id', verifyJWT, verifyAdmin, async (req, res) => {
             phone: updatedUser.password,
             about: updatedUser.about,
             photoUrl: updatedUser.photoUrl,
+            email: updatedUser.email,
             skills: updatedUser.skills ? updatedUser.skills : null,
         }
     }
