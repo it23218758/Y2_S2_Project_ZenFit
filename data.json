@@ -52,6 +52,19 @@
             "transactionId": "pi_3OpBXRCmx8hfkpYc0Aoc4Hqx"
         }
     ],
+
+    "users": [
+        {
+            "_id": "65df65cbb547a06bbad2f018",
+            "name": "sana",
+            "email": "mdalmamunit427@gmail.com",
+            "photoUrl": "https://lh3.googleusercontent.com/a/ACg8ocJbHdtBLXUAfOnav07QIzT1pCJbLh…",
+            "role": "admin",
+            "gender": "Is not specified",
+            "address": "Is not Provided",
+            "phone": "Is not Provide"
+}],
+
     "payments": [
         {
             "_id": "65e0a2e490f4342aa374bab7",
@@ -69,9 +82,13 @@
                 },
                 {
                     "1": "65e0a8b1ea542e3f73e3a793"
+
+            
                 }
+                
             ]
             
         }
-    ]
-}
+        ]
+    }
+
