@@ -1,0 +1,73 @@
+import java.util.ArrayList;
+import java.util.List;
+
+class Reservation {
+    private String reservationId;
+    private String customerName;
+    private String reservationDate;
+    private int numberOfGuests;
+
+    public Reservation(String reservationId, String customerName, String reservationDate, int numberOfGuests) {
+        this.reservationId = reservationId;
+        this.customerName = customerName;
+        this.reservationDate = reservationDate;
+        this.numberOfGuests = numberOfGuests;
+    }
+
+    public String getReservationId() {
+        return reservationId;
+    }
+
+    public String getCustomerName() {
+        return customerName;
+    }
+
+    public String getReservationDate() {
+        return reservationDate;
+    }
+
+    public int getNumberOfGuests() {
+        return numberOfGuests;
+    }
+
+    @Override
+    public String toString() {
+        return String.format("| %-12s | %-15s | %-12s | %-5d |", reservationId, customerName, reservationDate, numberOfGuests);
+    }
+}
+
+class ReservationReport {
+    private List<Reservation> reservations;
+
+    public ReservationReport() {
+        reservations = new ArrayList<>();
+    }
+
+    public void addReservation(Reservation reservation) {
+        reservations.add(reservation);
+    }
+
+    public void generateReport() {
+        System.out.println("+--------------+-----------------+--------------+-------+");
+        System.out.println("| Reservation  | Customer Name   | Date         | Guests|");
+        System.out.println("+--------------+-----------------+--------------+-------+");
+        for (Reservation r : reservations) {
+            System.out.println(r);
+        }
+        System.out.println("+--------------+-----------------+--------------+-------+");
+    }
+}
+
+public class ReservationSystem {
+    public static void main(String[] args) {
+        ReservationReport report = new ReservationReport();
+
+        // Adding sample reservations
+        report.addReservation(new Reservation("R001", "John Doe", "2025-04-10", 4));
+        report.addReservation(new Reservation("R002", "Alice Smith", "2025-04-11", 2));
+        report.addReservation(new Reservation("R003", "Bob Johnson", "2025-04-12", 6));
+
+        // Generate and display the report
+        report.generateReport();
+    }
+}
