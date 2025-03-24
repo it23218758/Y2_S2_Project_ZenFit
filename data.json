@@ -28,6 +28,7 @@
             "reason": null
         }
     ],
+    
     "cart": [
         {
             "_id": "65e0a8b1ea542e3f73e3a791",
@@ -35,6 +36,20 @@
             "classId": "65e0a8b1ea542e3f73e3a791",
             "email": "watson@taylor.com"
             
+        
+            "_id": "65e0a8b1ea542e3f73e3a791",
+            "name": "Progressive Power Flow",
+            "image": "https://i.ibb.co/1q6TT6j/women-on-yoga-2021-08-26-15-44-27-utc.jpg",
+            "availableSeats": 268,
+            "price": "70",
+            "videoLink": "https://youtu.be/UCgvZ4VkLMQ",
+            "description": "Aliq is notm hendr erit a augue insu image pellen tes.",
+            "instructorName": "Watson T.",
+            "instructorEmail": "watson@taylor.com",
+            "status": "approved",
+            "submitted": "2024-02-28T20:01:12.168Z",
+            "totalEnrolled": 2,
+            "reason": null
         }
     ],
     "enrolled": [
